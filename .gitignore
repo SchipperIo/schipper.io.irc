@@ -1,0 +1,41 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+artifacts/
+dist/
+dotnet/
+*.dll
+*.pdb
+*.exe
+*.binlog
+
+# NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+
+# Test / coverage
+TestResults/
+[Tt]est[Rr]esult*/
+coverage/
+*.coverage
+*.coveragexml
+
+# IDE
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vscode/*
+!.vscode/extensions.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated when the dev container is first opened
+.devcontainer/devcontainer-lock.json

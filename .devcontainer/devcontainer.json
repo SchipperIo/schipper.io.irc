@@ -1,0 +1,36 @@
+{
+  "name": "Schipper.Io.Irc",
+  "build": { "dockerfile": "Dockerfile" },
+
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "username": "vscode",
+      "userUid": "automatic",
+      "userGid": "automatic",
+      "installZsh": false,
+      "upgradePackages": false
+    }
+  },
+
+  "remoteUser": "vscode",
+
+  "mounts": [
+    "source=nuget,target=/home/vscode/.nuget/packages,type=volume",
+    "source=${localWorkspaceFolder}/../nuget.cache,target=/workspaces/nuget.cache,type=bind"
+  ],
+
+  "postCreateCommand": {
+    "chown": "sudo chown vscode:vscode /home/vscode/.nuget /home/vscode/.nuget/packages"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}

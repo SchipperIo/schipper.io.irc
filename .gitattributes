@@ -1,0 +1,14 @@
+# Checkout and commit as LF, even when core.autocrlf is true on Windows.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.dll binary
+*.pdb binary
+*.exe binary
+*.nupkg binary
+*.snupkg binary
